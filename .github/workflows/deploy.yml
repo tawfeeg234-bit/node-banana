@@ -25,8 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with next-on-pages
-        run: npx @cloudflare/next-on-pages
+      - name: Build Next.js
+        run: npm run build
         env:
           NODE_ENV: production
 
@@ -35,5 +35,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .vercel/output/static --project-name=node-banana
+          command: pages deploy .next --project-name=node-banana
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
