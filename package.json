@@ -12,6 +12,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
+        "@opennextjs/cloudflare": "latest",
     "@ai-sdk/google": "^3.0.13",
     "@ai-sdk/react": "^3.0.51",
     "@google/genai": "^1.30.0",
@@ -36,6 +37,7 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
+        "wrangler": "latest",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@types/jszip": "^3.4.0",
